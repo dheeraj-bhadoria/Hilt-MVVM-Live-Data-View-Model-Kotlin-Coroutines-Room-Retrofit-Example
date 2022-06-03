@@ -4,6 +4,11 @@ This is a sample project that presents a modern approach to Android app developm
 
 The project tries to combine popular Android tools and to demonstrate best development practices by utilizing up to date tech-stack like Hilt, MVVM, Live Data, View Model etc. in Kotlin.
 
+  ## Signed APK 
+
+    [Download Signed APK ]([https://kotlinlang.org/](https://github.com/dheeraj-bhadoria/Hilt-MVVM-Live-Data-View-Model-Kotlin-Coroutines-Room-Retrofit-Example/blob/main/signed_apk/app-release.apk))
+
+
   ## Description
 
   <img src="poster1.png" width="380" height="620" align="right" hspace="20">
