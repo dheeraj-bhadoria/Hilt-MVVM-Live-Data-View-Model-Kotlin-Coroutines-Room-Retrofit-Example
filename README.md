@@ -14,7 +14,7 @@ The project tries to combine popular Android tools and to demonstrate best devel
 
   * Tech/Tools
       * [Kotlin](https://kotlinlang.org/) 100% coverage
-      * [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html) and [LiveData] for async operations
+      * [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html) and [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) for async operations
       * [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) for dependency injection
       * [Jetpack](https://developer.android.com/jetpack)
           * [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) that stores, exposes and manages UI state
