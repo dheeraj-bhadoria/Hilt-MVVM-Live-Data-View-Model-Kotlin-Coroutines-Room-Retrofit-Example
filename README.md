@@ -7,4 +7,4 @@ The project tries to combine popular Android tools and to demonstrate best devel
 
 ## Description
 
-<img src="demo_gif_4.gif" width="380" height="620" align="right" hspace="20">
+<img src="poster1.png" width="380" height="620" align="right" hspace="20">
