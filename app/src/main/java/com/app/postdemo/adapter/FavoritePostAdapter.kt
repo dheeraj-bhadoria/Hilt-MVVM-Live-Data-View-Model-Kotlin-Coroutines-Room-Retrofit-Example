@@ -5,12 +5,16 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.app.postdemo.Interface.ItemListener
 import com.app.postdemo.R
 import com.app.postdemo.models.FavoritesPost
 import com.app.postdemo.models.Post
+import com.app.postdemo.utils.Constants
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 
 
 /**
@@ -53,6 +57,7 @@ class FavoritePostAdapter (var postItemList: List<FavoritesPost>,
   {
     var title = itemView.findViewById<TextView>(R.id.title)
     var body = itemView.findViewById<TextView>(R.id.body)
+    var postImage = itemView.findViewById<ImageView>(R.id.postImage)
 
     fun bindData(alertItemList: List<FavoritesPost>,
                  itemClickListner: ItemListener,
@@ -66,6 +71,14 @@ class FavoritePostAdapter (var postItemList: List<FavoritesPost>,
       itemView.setOnClickListener(){
         itemClickListner.itemClicked(position, context)
       }
+
+      val requestOptions = RequestOptions()
+      requestOptions.placeholder(R.drawable.placeholder)
+
+      Glide.with(context)
+        .setDefaultRequestOptions(requestOptions)
+        .load(Constants.POSTER_IMAGE)
+        .into(postImage);
 
     }
   }
