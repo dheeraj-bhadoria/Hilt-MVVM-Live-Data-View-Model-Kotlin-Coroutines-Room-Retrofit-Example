@@ -8,9 +8,10 @@ import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.app.postdemo.fragment.PostFavorites_Fragment
 import com.app.postdemo.fragment.Post_Fragment
-import com.example.postdemo.R
+import com.app.postdemo.utils.AppUtils
 import com.google.android.material.tabs.TabLayout
 import dagger.hilt.android.AndroidEntryPoint
+
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -33,6 +34,12 @@ class MainActivity : AppCompatActivity() {
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         tabLayout.setupWithViewPager(viewPager)
 
+
+        if(AppUtils.isInterConnectionIsAvailable(this@MainActivity)){
+
+        }else{
+            AppUtils.showErrorDialog(this@MainActivity, resources.getString(R.string.internetNotAvailableStr))
+        }
     }
 
 
@@ -57,4 +64,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+
+
 }

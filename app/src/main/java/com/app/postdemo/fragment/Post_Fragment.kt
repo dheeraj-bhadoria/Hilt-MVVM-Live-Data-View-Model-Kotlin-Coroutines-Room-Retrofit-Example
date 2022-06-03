@@ -7,6 +7,7 @@ import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -14,11 +15,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.app.postdemo.Interface.ItemListener
+import com.app.postdemo.R
 import com.app.postdemo.activity.PostComents
 import com.app.postdemo.adapter.PostAdapter
 import com.app.postdemo.models.Post
+import com.app.postdemo.utils.AppUtils
 import com.app.postdemo.viewmodels.PostViewModel
-import com.example.postdemo.R
 import com.faltenreich.skeletonlayout.Skeleton
 import com.faltenreich.skeletonlayout.SkeletonLayout
 import com.faltenreich.skeletonlayout.applySkeleton
@@ -59,13 +61,23 @@ class Post_Fragment  : Fragment() , ItemListener{
 
         mSwipeRefreshLayoutPost.setOnRefreshListener(SwipeRefreshLayout.OnRefreshListener {
 
+            if(AppUtils.isInterConnectionIsAvailable(activity!!)){
+
+            }else{
+                AppUtils.showErrorDialog(activity!!, resources.getString(R.string.internetNotAvailableStr))
+            }
+
             showSkelton()
 
             mainViewModel.postListLiveData.observe(activity!!, Observer {
+                if(it.size==0){
+                    Toast.makeText(activity!!, "No post found", Toast.LENGTH_LONG).show()
+                }
                 postsRV.adapter = null
                 postList = it
                 postsRV.layoutManager = LinearLayoutManager(activity!!)
                 postsRV.adapter = PostAdapter(it, activity!!, this!!)
+
             })
 
             mSwipeRefreshLayoutPost.setRefreshing(false)
@@ -73,6 +85,11 @@ class Post_Fragment  : Fragment() , ItemListener{
 
 
         mainViewModel.postListLiveData.observe(activity!!, Observer {
+
+            if(it.size==0){
+                Toast.makeText(activity!!, "No post found", Toast.LENGTH_LONG).show()
+            }
+
             postList = it
             postsRV.layoutManager = LinearLayoutManager(activity!!)
 

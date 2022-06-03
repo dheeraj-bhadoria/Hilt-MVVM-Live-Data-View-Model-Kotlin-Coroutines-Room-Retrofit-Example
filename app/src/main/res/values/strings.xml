@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Poster App</string>
+
+    <string name="internetAvailableStr">Internet connection available</string>
+    <string name="internetNotAvailableStr">Internet connection not available</string>
+
 </resources>

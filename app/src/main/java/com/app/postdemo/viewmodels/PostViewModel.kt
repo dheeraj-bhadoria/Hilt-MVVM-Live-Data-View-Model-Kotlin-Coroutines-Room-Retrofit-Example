@@ -18,7 +18,7 @@ class PostViewModel @Inject constructor(private val repository: PostRepository) 
 
     init {
             viewModelScope.launch {
-                repository.getProducts()
+                repository.getPost()
         }
     }
 

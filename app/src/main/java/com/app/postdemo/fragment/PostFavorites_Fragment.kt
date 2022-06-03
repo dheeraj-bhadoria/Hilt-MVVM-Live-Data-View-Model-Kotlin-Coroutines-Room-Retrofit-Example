@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -13,14 +14,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.app.postdemo.Interface.ItemListener
+import com.app.postdemo.R
 import com.app.postdemo.activity.PostComents
 import com.app.postdemo.adapter.FavoritePostAdapter
 import com.app.postdemo.adapter.PostAdapter
 import com.app.postdemo.models.FavoritesPost
 import com.app.postdemo.models.Post
+import com.app.postdemo.utils.AppUtils
 import com.app.postdemo.viewmodels.FavoritesPostViewModel
 import com.app.postdemo.viewmodels.PostViewModel
-import com.example.postdemo.R
 import com.faltenreich.skeletonlayout.Skeleton
 import com.faltenreich.skeletonlayout.SkeletonLayout
 import com.faltenreich.skeletonlayout.applySkeleton
@@ -58,9 +60,18 @@ class PostFavorites_Fragment : Fragment(), ItemListener {
 
         mSwipeRefreshLayoutFavoritePost.setOnRefreshListener(SwipeRefreshLayout.OnRefreshListener {
 
+            if(AppUtils.isInterConnectionIsAvailable(activity!!)){
+
+            }else{
+                AppUtils.showErrorDialog(activity!!, resources.getString(R.string.internetNotAvailableStr))
+            }
+
             showSkelton()
 
             favoritesPostViewModel.getFavoritePostList().observe(activity!!, Observer {
+                if(it.size==0){
+                    Toast.makeText(activity!!, "No favorite post found", Toast.LENGTH_LONG).show()
+                }
                 favoritesPostsRV.adapter = null
                 favoritesPostsRV.layoutManager = LinearLayoutManager(activity!!)
                 favoritesPostsRV.adapter = FavoritePostAdapter(it, activity!!, this!!)
@@ -70,6 +81,7 @@ class PostFavorites_Fragment : Fragment(), ItemListener {
         })
 
         favoritesPostViewModel.favoritesPost.observe(activity!!, Observer {
+
             favoritesPostsRV.layoutManager = LinearLayoutManager(activity!!)
             favoritesPostsRV.adapter = FavoritePostAdapter(it, activity!!, this!!)
         })
@@ -83,6 +95,7 @@ class PostFavorites_Fragment : Fragment(), ItemListener {
     }
 
     fun showSkelton(){
+
         skeleton = activity!!.findViewById<SkeletonLayout>(R.id.skeletonLayoutFavoritesPost)
 
         skeleton = favoritesPostsRV.applySkeleton(R.layout.row_post_gray)

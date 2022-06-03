@@ -8,9 +8,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.app.postdemo.Interface.ItemListener
+import com.app.postdemo.R
 import com.app.postdemo.models.FavoritesPost
 import com.app.postdemo.models.Post
-import com.example.postdemo.R
+
 
 /**
  * Created by Dheeraj Singh Bhadoria

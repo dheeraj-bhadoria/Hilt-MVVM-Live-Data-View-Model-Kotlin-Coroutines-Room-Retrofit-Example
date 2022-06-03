@@ -12,14 +12,15 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.app.postdemo.Interface.ItemListener
+import com.app.postdemo.R
 import com.app.postdemo.adapter.PostAdapter
 import com.app.postdemo.adapter.PostCommentAdapter
 import com.app.postdemo.models.FavoritesPost
 import com.app.postdemo.models.Post
+import com.app.postdemo.utils.AppUtils
 import com.app.postdemo.viewmodels.FavoritesPostViewModel
 import com.app.postdemo.viewmodels.PostCommentsViewModel
 import com.app.postdemo.viewmodels.PostViewModel
-import com.example.postdemo.R
 import dagger.hilt.android.AndroidEntryPoint
 import com.google.gson.Gson
 
@@ -39,7 +40,6 @@ class PostComents: AppCompatActivity(), ItemListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_post_detail)
 
-
         supportActionBar?.title = "Comments"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -51,6 +51,12 @@ class PostComents: AppCompatActivity(), ItemListener {
             postsCommentsRV.layoutManager = LinearLayoutManager(this@PostComents)
             postsCommentsRV.adapter = PostCommentAdapter(it,this@PostComents,  this!!)
         })
+
+        if(AppUtils.isInterConnectionIsAvailable(this@PostComents)){
+
+        }else{
+            AppUtils.showErrorDialog(this@PostComents, resources.getString(R.string.internetNotAvailableStr))
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

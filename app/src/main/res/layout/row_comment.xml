@@ -19,10 +19,11 @@
 
 
             <ImageView
+                android:src="@drawable/placeholder"
+                android:id="@+id/postCommentImage"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:src="@drawable/placeholder" />
+                android:layout_weight="0.2" />
 
             <LinearLayout
                 android:padding="4dp"

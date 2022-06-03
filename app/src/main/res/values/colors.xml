@@ -10,4 +10,7 @@
 
     <color name="hintColor">#A2A2A2</color>
 
+    <color name="redColor">#ff0000</color>
+    <color name="greenColor">#00FF00</color>
+
 </resources>
