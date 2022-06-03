@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="115dp"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:padding="5dp"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="95dp">
+
+            <ImageView
+                android:layout_margin="5dp"
+                android:background="@color/skeleton_shimmer"
+                android:layout_weight="0.2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+
+            <LinearLayout
+                android:padding="4dp"
+                android:orientation="vertical"
+                android:layout_weight="0.8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:background="@color/skeleton_shimmer"
+                    android:maxLines="2"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:id="@+id/title"
+                    android:text=""
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:background="@color/skeleton_shimmer"
+                    android:maxLines="2"
+                    android:id="@+id/body"
+                    android:text=""
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>
