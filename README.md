@@ -14,15 +14,12 @@ The project tries to combine popular Android tools and to demonstrate best devel
 
   * Tech/Tools
       * [Kotlin](https://kotlinlang.org/) 100% coverage
-      * [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html) and [Flow](https://developer.android.com/kotlin/flow) for async operations
+      * [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html) and [LiveData] for async operations
       * [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) for dependency injection
       * [Jetpack](https://developer.android.com/jetpack)
-          * [Compose](https://developer.android.com/jetpack/compose) 
-          * [Navigation](https://developer.android.com/topic/libraries/architecture/navigation/) for navigation between composables
           * [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) that stores, exposes and manages UI state
       * [Retrofit](https://square.github.io/retrofit/) for networking
-      * [Coil](https://github.com/coil-kt/coil) for image loading
-
+    
   * Modern Architecture
       * Single activity architecture (with [Navigation component](https://developer.android.com/guide/navigation/navigation-getting-started)) that defines navigation graphs
       * MVVM for presentation layer
