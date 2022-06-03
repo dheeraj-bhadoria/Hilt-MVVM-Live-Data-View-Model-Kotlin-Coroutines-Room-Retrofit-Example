@@ -25,3 +25,7 @@ The project tries to combine popular Android tools and to demonstrate best devel
       * [Android Architecture components](https://developer.android.com/topic/libraries/architecture) ([ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
       * [Android KTX](https://developer.android.com/kotlin/ktx) - Jetpack Kotlin extensions
 
+   ##  References for API:
+   * Base Url: https://jsonplaceholder.typicode.com
+   * Posts: /posts
+   * Comments: /posts/{post_id}/comments
