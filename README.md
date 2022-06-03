@@ -6,7 +6,7 @@ The project tries to combine popular Android tools and to demonstrate best devel
 
   ## Signed APK 
 
-   * [Download APK](https://github.com/dheeraj-bhadoria/Hilt-MVVM-Live-Data-View-Model-Kotlin-Coroutines-Room-Retrofit-Example/blob/main/signed_apk/app-release.apk)
+   * [Download APK](https://github.com/dheeraj-bhadoria/Hilt-MVVM-Live-Data-View-Model-Kotlin-Coroutines-Room-Retrofit-Example/blob/main/signed_apk/app-release.apk?raw=true)
 
   ## Description
 
