@@ -12,7 +12,7 @@ The project tries to combine popular Android tools and to demonstrate best devel
      * [Material design](https://material.io/design)
 
   * Tech/Tools
-      * [Kotlin](https://kotlinlang.org/) 100% coverage
+      * [Kotlin](https://kotlinlang.org/)
       * [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html) and [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) for async operations
       * [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) for dependency injection
       * [Jetpack](https://developer.android.com/jetpack)
