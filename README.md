@@ -9,7 +9,6 @@ The project tries to combine popular Android tools and to demonstrate best devel
   <img src="poster1.png" width="380" height="620" align="right" hspace="20">
 
   * UI 
-     * [Compose](https://developer.android.com/jetpack/compose) declarative UI framework
      * [Material design](https://material.io/design)
 
   * Tech/Tools
