@@ -7,4 +7,8 @@ The project tries to combine popular Android tools and to demonstrate best devel
 
 ## Description
 
-<img src="poster1.png" width="380" height="620" align="right" hspace="20">
+<img src="poster1.png" width="380" height="620">
+
+<img src="poster2.png" width="380" height="620">
+
+<img src="poster3.png" width="380" height="620">
