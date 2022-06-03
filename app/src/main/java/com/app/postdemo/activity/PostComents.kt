@@ -62,6 +62,7 @@ class PostComents: AppCompatActivity(), ItemListener {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(item.itemId == android.R.id.home){
             finish()
+            overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left)
         }else if(item.itemId == R.id.menu_item){
             val gson = Gson()
             val postObject: FavoritesPost =
@@ -82,6 +83,11 @@ class PostComents: AppCompatActivity(), ItemListener {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         getMenuInflater().inflate(R.menu.menu, menu);
         return super.onCreateOptionsMenu(menu);
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left)
     }
 
 }

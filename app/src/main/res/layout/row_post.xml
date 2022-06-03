@@ -20,7 +20,7 @@
             <ImageView
                 android:src="@drawable/placeholder"
                 android:id="@+id/postImage"
-                android:layout_weight="0.2"
+                android:layout_weight="0.18"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"/>
 
@@ -28,7 +28,7 @@
             <LinearLayout
                 android:padding="4dp"
                 android:orientation="vertical"
-                android:layout_weight="0.8"
+                android:layout_weight="0.82"
                 android:layout_width="0dp"
                 android:layout_height="match_parent">
 

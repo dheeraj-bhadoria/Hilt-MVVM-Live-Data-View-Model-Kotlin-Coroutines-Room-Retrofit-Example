@@ -104,6 +104,7 @@ class Post_Fragment  : Fragment() , ItemListener{
         val postJSON = gson.toJson(postList?.get(position))
         intent.putExtra("Post", postJSON)
         startActivity(intent)
+        activity!!.overridePendingTransition(R.anim.enter, R.anim.exit)
 
     }
 
